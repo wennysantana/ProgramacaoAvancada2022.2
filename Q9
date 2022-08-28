@@ -1,0 +1,30 @@
+// QUESTÃO 9
+
+/*  Faça um programa que receba via teclado o tempo de duração de um evento em
+uma fábrica em uma a variável do tipo inteira (int) expressa em segundos e mostre-o
+expresso em horas, minutos e segundos.
+
+- Entrada
+O arquivo de entrada contém valores com inteiros (int) referente a quantidade de
+segundos informada.
+
+- Saída
+Imprima a conversão realizada em HH (horas), MM (minutos) e Segundos (SS).*/
+
+import java.util.Scanner;
+
+public class ConversorH {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+        int tempo, HH=0,MM=0,SS=0;
+        System.out.println("Olá!\nDigite a quantidade de segundos: ");
+        tempo = scan.nextInt();
+
+        HH = tempo/3600;
+        MM = ((tempo%3600)/60);
+        SS = ((tempo%3600)%60);
+
+        System.out.println("HH:MM:SS = "+HH+":"+MM+":"+SS);
+    }
+}
