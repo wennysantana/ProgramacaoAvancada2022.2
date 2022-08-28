@@ -1,0 +1,54 @@
+// Questão 5
+
+/*Faça um programa que leia do teclado três valores inteiros e exiba-os em ordem
+crescente.
+
+- Entrada
+O arquivo de entrada contém 3 (três) valores inteiros, representando os valores a
+serem ordenados.
+
+- Saída
+Imprima os valores lidos em ordem crescente.*/
+
+import java.util.Scanner;
+
+public class OrdemCrescente {
+	public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	
+	int a, b, c;
+	int maior = 0;
+	int meio = 0;
+	int menor = 0;
+	
+	System.out.println("Digite um número:");
+	a = scan.nextInt();
+	System.out.println("Digite outro número:");
+	b = scan.nextInt();
+	System.out.println("Digite mais um número:");
+	c = scan.nextInt();
+	
+	if (a < b) {
+		if (b < c) {
+			System.out.println(a+"\n"+b+"\n"+c);
+			} 
+		else if (a < c) {
+			System.out.println(a+"\n"+c+"\n"+b);
+			}
+		else {
+			System.out.println(c+"\n"+a+"\n"+b);
+			}
+		}
+	else if (b < c) {
+		if (a < c) {
+		System.out.println(b+"\n"+a+"\n"+c);
+			} 
+		else {
+				System.out.println(b+"\n"+c+"\n"+a);
+			}
+		} 
+		else {
+			System.out.println(c+"\n"+b+"\n"+a);
+		}
+	}
+}
