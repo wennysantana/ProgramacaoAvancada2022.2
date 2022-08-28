@@ -1,0 +1,39 @@
+// QUESTÃO 8
+
+/* Elabore um programa que permita calcular o Imposto de Renda (IR) de um casal
+a partir das rendas do Homem (RH) e da Mulher (RM). O imposto é calculado sobre
+a renda conjunta (RC=RH+RM) de acordo com a tabela abaixo:
+
+-------------------------------
+Renda Conjunta Alíquota - IR
+Até 900.00 - Isento
+De 900.01 até 1500.00 - 10%
+De 1500.01 até 2500.00 -  15%
+Acima de 2500.00 - 25%
+-------------------------------
+
+- Entrada
+O arquivo de entrada contém valores com dupla precisão(double) referente a renda
+do homem e a renda da mulher.
+
+- Saída
+Imprima a renda conjunta (RC), a alíquota utilizada(ALIO), o imposto de renda(IR), a
+renda líquida calculada(RL).*/
+
+import java.util.Scanner;
+
+public class Imposto {
+
+	public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+	Double rmulher, rhomem;
+	Double rconjunta, alio, impostoder, rendaliquida;
+	
+	System.out.println("Olá, digite o valor da renda da mulher: ");
+	rmulher = scan.nextDouble();
+	System.out.println("Agora digite o valor da renda do homem: ");
+	rhomem = scan.nextDouble();
+	
+	}
+
+}
