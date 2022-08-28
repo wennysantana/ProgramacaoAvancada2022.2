@@ -1,0 +1,28 @@
+// QUESTÃO 10 
+/*  Leia um valor inteiro correspondente à idade de uma pessoa em dias e informe-a
+em anos, meses e dias. Obs: Apenas para facilitar o cálculo, considere todo ano
+com 365 dias e todo mês com 30 dias.
+
+- Entrada
+O arquivo de entrada contém um valor inteiro.
+
+- Saída
+Imprima a saída conforme exemplo fornecido. */
+
+import java.util.Scanner;
+
+public class ConversorI {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+        int idade, ano=0, mes=0, dias=0;
+        System.out.println("Olá!\nDigite a sua idade: ");
+        idade = scan.nextInt();
+
+        ano = idade/365;
+        mes = ((idade%365)/30);
+        dias = ((idade%365)%30);
+
+        System.out.println(ano+" ano (s) \n"+mes+" mês (es)\n"+dias+" dia (s)"); 
+    }
+}
