@@ -27,5 +27,8 @@ public class Consumo {
 		combustivel = scan.nextDouble();
 		
 		consumo = (Double) (distancia / combustivel) ;
+		
+		System.out.println("O consumo médio foi: "+ consumo + " km/l");
+		
 	}
 }
