@@ -1,0 +1,31 @@
+// QUESTAO 18
+
+/* Faça um programa que inverta um número inteiro com quatro algarismos.
+
+ - Entrada
+Você receberá um único número inteiro com quatro algarismos.
+
+ - Saída
+Você deve imprimir o número invertido seguido de um final de linha. Importante: se o
+número dado for 3000 por exemplo, o invertido dele deve ser 3 e não 0003. */
+
+import java.util.Scanner;
+
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+    System.out.println("Informe um número: ");
+    int numero = input.nextInt();
+    scan.close();
+    int invertido = 0;
+
+
+    while(numero > 0){
+        invertido *= 10;
+        invertido += (numero%10);
+        numero /= 10;
+    }
+    System.out.println(invertido);
+
+
+}
+}
