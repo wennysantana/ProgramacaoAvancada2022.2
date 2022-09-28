@@ -1,0 +1,32 @@
+//QUESTAO 22
+
+import java.util.Scanner;
+
+public class Consumoagua {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int consumo; 
+        double totalConta =7;
+        System.out.println("Informe o valor do consumo: ");
+        consumo = scan.nextInt();
+
+        if(consumo<=10){     
+            totalConta+=0;
+        }else if(consumo >100){
+            consumo-=10;
+            while(consumo >0){ totalConta += 5; consumo--;}
+        }else if((consumo >31)&&(consumo<=100)){
+            consumo -= 10;
+            while((consumo >0)){ totalConta += 2; consumo--;}
+        }else if((consumo >11)&&(consumo<=30)){
+            consumo -= 10;
+            while((consumo >0)){ totalConta++; consumo --;}
+        }
+        
+        
+        
+
+        System.out.printf("Valor em Reais: "+"%.2f",totalConta);
+    }
+    
+}
