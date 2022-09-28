@@ -3,12 +3,11 @@
 import java.util.Scanner;
 	public class CNumeros {
 	    public static void main(String[] args) {
-	        Scanner input = new Scanner(System.in);
+	        Scanner scan = new Scanner(System.in);
 	        int x, y;
 	        System.out.println("Informe os valores de x e y:");
-	        x=input.nextInt();
-	        y=input.nextInt();
-	        input.close();
+	        x=scan.nextInt();
+	        y=scan.nextInt();
 
 	        if(x>y){System.out.println(1);}else{System.out.println(0);}
 	        if(x==y){System.out.println(1);}else{System.out.println(0);}
