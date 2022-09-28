@@ -1,0 +1,25 @@
+//QUESTAO 24
+
+import java.util.Scanner;
+
+public class Palindromo {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int numero = scan.nextInt();
+        int aux = numero;
+        int invertido = 0;
+
+
+        while(numero > 0){
+            invertido *= 10;
+            invertido += (numero%10);
+            numero /= 10;
+        }
+        if(aux == invertido){
+            System.out.println("S");
+        }else{System.out.println("N");}
+        
+    }
+}
