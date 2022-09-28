@@ -1,0 +1,40 @@
+// QUESTÃO 16
+/*  Supondo que a população de um país A seja recebido via teclado em uma
+variável com dupla precisão (double) representando a população atual daquele país
+que possui uma taxa anual de crescimento de 3% a.a. o que a população de um
+país B seja recebida também em uma variável com dupla precisão e que tenha uma
+taxa anual de crescimento de 1,5% a.a., fazer um programa que calcule e de anos
+necessários para que a população do país A ultrapasse ou iguale a população do
+número do país B, mantida essas taxas de crescimento.
+
+- Entrada
+O arquivo de entrada contém um valor referente a população do país A(POPA) e um
+outro valor inteiro referente a população do país B(POPB). A população do país B
+tem que ser superior ou igual a do país A, ou seja : (POPB > POPA).
+
+- Saída
+Deve ser mostrado a quantidade de anos que a população do país B ultrapasse ou
+se iguale a do país A. */
+
+import java.util.Scanner;
+
+public class Populacao {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double a=0, b=0;
+        System.out.println("Qual é a população do país A?");
+        a=input.nextDouble();
+        System.out.println("Qual é a população do país B?");
+        b=input.nextDouble();
+        input.close();
+        int tempo =1;
+
+        while(a < b){
+            a += (0.03*a);
+            b += (0.015*b);
+            tempo++;
+        }
+       
+        System.out.println(tempo+" anos");
+    }
+}
