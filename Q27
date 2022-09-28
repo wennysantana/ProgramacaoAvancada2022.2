@@ -1,0 +1,34 @@
+//QUESTAO 27
+
+import java.util.Scanner;
+
+public class Glicose {
+
+	public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int[] medicao = new int[4];
+        int cont=1;
+        double total=0;
+        double media;
+
+        for(int i=0; i<medicao.length; i++){
+            System.out.println(cont+"º medição: ");
+            medicao[i] = scan.nextInt();
+            cont++;
+        }
+        
+        for(int i=0; i <medicao.length; i++){
+            if(medicao[i]<110){
+                System.out.println(medicao[i]+" NORMAL");
+            }else if((medicao[i]>=110)&&(medicao[i]<=125)){
+                System.out.println(medicao[i]+" ALTERADA");
+            }else if(medicao[i]>125){
+                System.out.println(medicao[i]+" MUITO ALTA");
+            }
+            total += medicao[i];
+        }
+
+        media = total/medicao.length;
+        System.out.println("MÉDIA DAS LEITURAS ="+media);
+    }
+}
