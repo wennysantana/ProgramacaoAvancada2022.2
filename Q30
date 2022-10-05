@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class TPares {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int numero1, numero2, numeromaior = 0, numeromenor = 0, resultado = 0;
+        System.out.println("Digite um numero: ");
+        numero1 =scan.nextInt();
+        System.out.println("Digite outro numero : ");
+        numero2 =scan.nextInt();
+        System.out.println(" ");
+        if (numero1 > numero2){
+            numeromaior = numero1; numeromenor = numero2;
+        }
+        if(numero2 > numero1){
+            numeromaior = numero2; numeromenor = numero1;
+        }
+
+        for (int i = numeromenor; i < numeromaior+1; i++) {
+            System.out.println(i);
+            resultado = resultado+i;
+
+        }
+        System.out.println("");
+        System.out.println(resultado);
+        
+    }
+}
